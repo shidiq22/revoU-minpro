@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=chrome" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="index.css" rel="stylesheet">
+        <title>RevoU Mini Software Engineering Class</title>
+    </head>
+    <body>
+    <header class="header-wrapper">
+      <img class="logo" alt="logo" src="studio.png" />
+      <div class="menu">
+        <div class="menuitem"><a href="index.html">Home</a></div>
+        <div class="menuitem"><a href="profile.html">Our Profile</a></div>
+        <div class="menuitem"><a href="portfolio.html">Portfolio</a></div>
+        <div class="menuitem"><a href="index.html">Message Us</a></div>
+      </div>
+    </header>
+    <main class="main-content">
+      <h1><center>Message Us</center></h1>
+      <div class="form-section">
+        <div class="container">
+          <form name="message-form" onsubmit="return validateForm()">
+            <div class="row">
+              <label for="fname">Nama</label>
+              <input type="text" id="fname" name="full-name" placeholder="Your name..">
+            </div>
+            <div class="row">
+            <div class="col-25">
+              <label for="fbdate">Tanggal Lahir</label>
+            </div>
+            <div class="col-75">
+              <input type="date" id="fbdate" name="birth-date">
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+              <label for="country">Jenis Kelamin</label>
+            </div>
+            <div class="col-75">
+              <input type="radio" id="male" name="gender" value="Laki-laki" />
+              <label for="male">Laki-laki</label>
+              <input type="radio" id="female" name="gender" value="Perempuan" />
+              <label for="female">Perempuan</label>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+              <label for="messages">Pesan</label>
+            </div>
+            <div class="col-75">
+              <textarea id="messages" name="messages" placeholder="Write something.." style="height:100px"></textarea>
+            </div>
+            </div>
+            <br>
+            <div class="row">
+            <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+        <script>
+          function validateForm() {
+            var name = document.forms["message-form"]["full-name"].value;
+            var date = document.forms["message-form"]["birth-date"].value;
+            var gender = document.forms["message-form"]["gender"].value;
+            var messages = document.forms["message-form"]["messages"].value;
+        var now = new Date();
+
+            if (name == "" || date == "" || gender == "" || messages == "") {
+              alert("Input tidak boleh kosong");
+              return false;
+            }
+
+            document.getElementById("sender-full-name").innerText = name;
+            document.getElementById("sender-birth-date").innerText = date;
+            document.getElementById("sender-gender").innerText = gender;
+            document.getElementById("sender-messages").innerText = messages;
+            document.getElementById("sender-time").innerText = now;
+            return false;
+          }
+        </script>
+        <div class="form-output">
+          <p> From: 
+          <br/>	
+          <h2><span id="sender-full-name"></span></h2>
+          <br/>
+          Birth Date - Gender : <span id="sender-birth-date"></span> - <span id="sender-gender"></span>
+          </p>
+              <p>Pesan: 
+          <br/><span id="sender-messages"></span>
+          </p>
+              <p>Tanggal: <span id="sender-time"></span>
+          </p>
+        </div>
+      </div>
+    </main>
+    <hr/>
+    <div class="footer"> Copyright © 2023 Light Studio</div>
+    </body>
+</html>
