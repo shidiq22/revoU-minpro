@@ -8,3 +8,9 @@ Berikut tampilan website company profile yang saya buat:
 
 Halaman Our Profile:
 ![SS-Light Studio3](https://user-images.githubusercontent.com/4425860/220808557-eb55ff12-3b1b-44df-8b86-09b18ce4c989.jpg)
+
+Halaman Our Portfolio:
+![SS-Light Studio4](https://user-images.githubusercontent.com/4425860/220853759-a72ab36d-1c8e-4a63-a095-f6a0e2ba71b0.jpg)
+
+Halaman Message Us:
+![SS-Light Studio5](https://user-images.githubusercontent.com/4425860/220853875-4f5a3320-f1f3-4850-965c-39956fc17a98.jpg)
