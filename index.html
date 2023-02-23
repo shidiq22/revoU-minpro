@@ -2,96 +2,61 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=chrome" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Light Studio</title>
   </head>
   <body>
     <header class="header-wrapper">
-      <img class="logo" alt="logo" src="studio.png" />
+      <img class="logo" alt="logo" src="./assets/studio.png" />
       <div class="menu">
         <div class="menuitem"><a href="index.html">Home</a></div>
-		<div class="menuitem"><a href="profile.html">Our Profile</a></div>
-		<div class="menuitem"><a href="portfolio.html">Portfolio</a></div>
-		<div class="menuitem"><a href="messageus.html">Message Us</a></div>
+        <div class="menuitem"><a href="profile.html">Our Profile</a></div>
+        <div class="menuitem"><a href="portfolio.html">Portfolio</a></div>
+        <div class="menuitem"><a href="messageus.html">Message Us</a></div>
       </div>
     </header>
 
     <main class="main-content">
-      <h1>Hi <span id="nama">Light</span>, Welcome To Our Web Studio</h1>
-
-      <script>
-        var name = prompt("Hi, who are You?");
-        document.getElementById("nama").innerText = name;
-      </script>
+      <h1>Hi <span id="title-name">Light</span>, Welcome To Our Web Studio</h1>
 
       <div>
         <img
           class="img-slideshow"
-          src="https://source.unsplash.com/random/1080x400?art-design&sig=1"
+          src="https://source.unsplash.com/random/1080x400?art-design&sig=1" alt="Slider 1"
         />
         <img
           class="img-slideshow"
-          src="https://source.unsplash.com/random/1080x400?art-design&sig=2"
+          src="https://source.unsplash.com/random/1080x400?art-design&sig=2" alt="Slider 2"
         />
         <img
           class="img-slideshow"
-          src="https://source.unsplash.com/random/1080x400?art-design&sig=3"
+          src="https://source.unsplash.com/random/1080x400?art-design&sig=3" alt="Slider 3"
         />
-        <!-- <button onclick="plusDivs(-1)">Previous</button>
-        <button onclick="plusDivs(1)">Next</button> -->
       </div>
 
-      <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-          showDivs((slideIndex += n));
-        }
-
-        function showDivs(n) {
-          var i;
-          var imgList = document.getElementsByClassName("img-slideshow");
-          if (n > imgList.length) slideIndex = 1;
-          else if (n < 1) slideIndex = imgList.length;
-
-          for (i = 0; i < imgList.length; i++) {
-            imgList[i].style.display = "none";
-          }
-
-          imgList[slideIndex - 1].style.display = "block";
-        }
-
-        setInterval(() => {
-          plusDivs(1);
-        }, 1000);
-      </script>
       <hr/>
       <h1><center>Our Headquarter</center></h1>
       <section class="image-section">
-      <div class="image-container">
-        <center><img src="gambar1.png" alt="Gambar 1"></center>
-        <div class="image-caption">
-        <h3>Jakarta</h3>
-        <!-- <p>Deskripsi gambar 1</p> -->
+        <div class="image-container">
+          <center><img src="./assets/gambar1.png" alt="Jakarta Headquarter"></center>
+          <div class="image-caption">
+            <h3>Jakarta</h3>
+          </div>
         </div>
-      </div>
-      <div class="image-container">
-        <center><img src="gambar2.png" alt="Gambar 2"></center>
-        <div class="image-caption">
-        <h3>Bali</h3>
-        <!-- <p>Deskripsi gambar 2</p> -->
+        <div class="image-container">
+          <center><img src="./assets/gambar2.png" alt="Bali Headquarter"></center>
+          <div class="image-caption">
+            <h3>Bali</h3>
+          </div>
         </div>
-      </div>
-      <div class="image-container">
-        <center><img src="gambar3.png" alt="Gambar 3"></center>
-        <div class="image-caption">
-        <h3>Yogyakarta</h3>
-        <!-- <p>Deskripsi gambar 3</p> -->
+        <div class="image-container">
+          <center><img src="./assets/gambar3.png" alt="Yogyakarta Headquarter"></center>
+          <div class="image-caption">
+            <h3>Yogyakarta</h3>
+          </div>
         </div>
-      </div>
       </section>
 
       <h1><center>Message Us</center></h1>
@@ -135,27 +100,7 @@
             </div>
           </form>
         </div>
-        <script>
-          function validateForm() {
-            var name = document.forms["message-form"]["full-name"].value;
-            var date = document.forms["message-form"]["birth-date"].value;
-            var gender = document.forms["message-form"]["gender"].value;
-            var messages = document.forms["message-form"]["messages"].value;
-        var now = new Date();
-
-            if (name == "" || date == "" || gender == "" || messages == "") {
-              alert("Input tidak boleh kosong");
-              return false;
-            }
-
-            document.getElementById("sender-full-name").innerText = name;
-            document.getElementById("sender-birth-date").innerText = date;
-            document.getElementById("sender-gender").innerText = gender;
-            document.getElementById("sender-messages").innerText = messages;
-            document.getElementById("sender-time").innerText = now;
-            return false;
-          }
-        </script>
+        
         <div class="form-output">
           <p> From: 
           <br/>	
@@ -172,6 +117,7 @@
       </div>
     </main>
     <hr/>
-    <div class="footer"> Copyright © 2023 Light Studio</div>
+    <footer> Copyright © 2023 Light Studio</footer>
+    <script src="./javascript/index.js"></script>
   </body>
 </html>
